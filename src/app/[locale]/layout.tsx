@@ -3,6 +3,7 @@ import '@/styles/global.css';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import { DemoBadge } from '@/components/DemoBadge';
 import { AppConfig } from '@/utils/AppConfig';
@@ -56,6 +57,7 @@ export default function RootLayout(props: {
 
           <DemoBadge />
         </NextIntlClientProvider>
+        <GoogleTagManager gtmId="GTM-P42246N6" />
       </body>
     </html>
   );
