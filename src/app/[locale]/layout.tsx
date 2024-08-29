@@ -1,9 +1,10 @@
 import '@/styles/global.css';
 
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
+import Head from 'next/head';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { GoogleTagManager } from '@next/third-parties/google'
 
 import { DemoBadge } from '@/components/DemoBadge';
 import { AppConfig } from '@/utils/AppConfig';
@@ -48,6 +49,9 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
+      <Head>
+        <meta name="google-site-verification" content="9mR0qYlGrHgStCeEyf66tTOBk3iy6KX6ws22vM3k9po" />
+      </Head>
       <body>
         <NextIntlClientProvider
           locale={props.params.locale}

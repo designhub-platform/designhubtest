@@ -57,5 +57,7 @@
     "pcss",
     "postcss",
     "github-actions-workflow"
-  ]
+  ],
+  "IDX.aI.enableInlineCompletion": true,
+  "IDX.aI.enableCodebaseIndexing": true
 }
