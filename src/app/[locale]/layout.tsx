@@ -2,7 +2,6 @@ import '@/styles/global.css';
 
 import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
-import Head from 'next/head';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
