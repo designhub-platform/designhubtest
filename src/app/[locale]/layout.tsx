@@ -49,9 +49,10 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <Head>
+      <head>
         <meta name="google-site-verification" content="9mR0qYlGrHgStCeEyf66tTOBk3iy6KX6ws22vM3k9po" />
-      </Head>
+        <meta name="p:domain_verify" content="338bd32e5c25207049d197e13f329c6d"/>
+      </head>
       <body>
         <NextIntlClientProvider
           locale={props.params.locale}
