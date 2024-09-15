@@ -1,68 +1,23 @@
-import '@/styles/global.css';
+import { AppHeader } from "@/components/shared/header";
+import { cn } from "@/lib/utils";
 
-import { GoogleTagManager } from '@next/third-parties/google';
-import type { Metadata } from 'next';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
-
-import { DemoBadge } from '@/components/DemoBadge';
-import { AppConfig } from '@/utils/AppConfig';
-
-export const metadata: Metadata = {
-  icons: [
-    {
-      rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: '/favicon-32x32.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      url: '/favicon-16x16.png',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon.ico',
-    },
-  ],
-};
-
-export function generateStaticParams() {
-  return AppConfig.locales.map(locale => ({ locale }));
+interface PagesLayoutProps {
+  children: React.ReactNode;
 }
 
-export default function RootLayout(props: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  unstable_setRequestLocale(props.params.locale);
-
-  // Using internationalization in Client Components
-  const messages = useMessages();
-
+export default async function PagesLayout({
+  children,
+}: PagesLayoutProps) {
   return (
-    <html lang={props.params.locale}>
-      <head>
-        <meta name="google-site-verification" content="9mR0qYlGrHgStCeEyf66tTOBk3iy6KX6ws22vM3k9po" />
-        <meta name="p:domain_verify" content="338bd32e5c25207049d197e13f329c6d"/>
-      </head>
-      <body>
-        <NextIntlClientProvider
-          locale={props.params.locale}
-          messages={messages}
-        >
-          {props.children}
-
-          <DemoBadge />
-        </NextIntlClientProvider>
-        <GoogleTagManager gtmId="GTM-P42246N6" />
-      </body>
-    </html>
+    <div className={cn(
+          "min-h-screen bg-background font-sans text-foreground antialiased",
+          
+        )}>
+      <AppHeader />
+      <main className="flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-br  from-indigo-50 via-white to-cyan-100 py-32">
+        {children}
+      </main>
+  
+    </div>
   );
 }
