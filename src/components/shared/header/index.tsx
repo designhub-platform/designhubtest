@@ -21,7 +21,7 @@ export async function AppHeader() {
     <Header.Root session={data}>
       <Header.MenuBarButton />
       <Header.Content />
-      <Header.DesktopMenuBar />
+      <Header.DesktopMenuBar 
     </Header.Root>
   );
 }
