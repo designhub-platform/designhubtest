@@ -15,9 +15,7 @@ type BottomMenuIconProps = LinkProps & {
 
 export function BottomMenuIcon({
   icon: Icon,
-  color,
   href,
-  imageUrl,
   iconActive: IconActive,
 }: BottomMenuIconProps) {
   const pathname = usePathname();

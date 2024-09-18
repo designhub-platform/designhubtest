@@ -1,7 +1,7 @@
 'use client'
 
 //import { BiSolidUser, BiUser } from "react-icons/bi";
-import { FaCompass, FaCrown, FaRegCompass } from "react-icons/fa";
+import { FaCompass, FaCrown, FaRegCompass,FaSearch } from "react-icons/fa";
 //import { GiProgression } from "react-icons/gi";
 import { GoHome, GoHomeFill } from "react-icons/go";
 //import { IoIosAddCircle } from "react-icons/io";
@@ -9,7 +9,6 @@ import { GoHome, GoHomeFill } from "react-icons/go";
 
 
 import { BottomMenuFragments } from "./fragments ";
-import { BsBarChart, BsBarChartFill } from "react-icons/bs";
 
 export function BottomMenu() {
   return (
@@ -21,18 +20,10 @@ export function BottomMenu() {
       />
       <BottomMenuFragments.Icon
         href="/desempenho"
-        icon={BsBarChart}
-        iconActive={BsBarChartFill}
+        icon={FaSearch}
+        iconActive={FaSearch}
       />
 
-      {/* <BottomMenuFragments.Icon
-        href="/temas"
-        icon={IoIosAddCircle}
-        iconActive={IoIosAddCircle}
-      /> */}
-      {/* <div className="relative">
-        <AddWriting />
-      </div> */}
 
       <BottomMenuFragments.Icon
         href="/explorar"
@@ -40,11 +31,7 @@ export function BottomMenu() {
         iconActive={FaCompass}
       />
 
-      {/* <BottomMenuFragments.Icon
-        href="/perfil"
-        icon={BiUser}
-        iconActive={BiSolidUser}
-      /> */}
+      
       <BottomMenuFragments.Icon
         href="/plus"
         icon={FaCrown}
