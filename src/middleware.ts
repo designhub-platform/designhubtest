@@ -13,7 +13,7 @@ const intlMiddleware = createMiddleware({
 
 export async  function middleware(
   request: NextRequest,
-  event: NextFetchEvent,
+ // event: NextFetchEvent,
 ) {
    await updateSession(request)
 
