@@ -7,6 +7,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { AppConfig } from "@/utils/AppConfig";
 import { Providers } from "@/providers";
 import { cn } from "@/lib/utils";
+import { BottomMenu } from "@/components/shared/bottom-menu";
 
 export const metadata: Metadata = {
  icons: [
@@ -57,10 +58,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
      name="google-site-verification"
      content="9mR0qYlGrHgStCeEyf66tTOBk3iy6KX6ws22vM3k9po"
     />
-    <meta
-     name="p:domain_verify"
-     content="338bd32e5c25207049d197e13f329c6d"
-    />
+    <meta name="p:domain_verify" content="338bd32e5c25207049d197e13f329c6d" />
    </head>
    <body
     className={cn(
@@ -68,7 +66,12 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
      poppins.className,
     )}
    >
-    <Providers locale={params.locale}>{children}</Providers>
+    <Providers locale={params.locale}>
+     <main className="flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-br  from-indigo-50 via-white to-cyan-100 py-32">
+      {children}
+     </main>
+     <BottomMenu />
+    </Providers>
    </body>
   </html>
  );
