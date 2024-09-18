@@ -1,7 +1,7 @@
 import "@/styles/global.css";
 
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import {  Poppins } from "next/font/google";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 import { AppConfig } from "@/utils/AppConfig";
