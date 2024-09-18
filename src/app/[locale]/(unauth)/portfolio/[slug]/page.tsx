@@ -43,5 +43,5 @@ const PortfolioDetail = (props: IPortfolioDetailProps) => {
 };
 
 
-
+export const dynamicParams = false;
 export default PortfolioDetail;

@@ -5,7 +5,7 @@ const localePrefix: LocalePrefix = 'as-needed';
 // FIXME: Update this configuration file based on your project information
 export const AppConfig = {
   name: 'Design Hub',
-  locales: ['en', 'pt-BR','pt','es'],
-  defaultLocale: 'pt-BR',
+  locales: ['en','pt','es'],
+  defaultLocale: 'pt',
   localePrefix,
 };
